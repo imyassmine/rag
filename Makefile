@@ -28,7 +28,6 @@ debug:
 clean:
 				$(call ANIMATION,Removing compiled files and caches)
 				@rm -rf __pycache__ */__pycache__ .pytest_cache .mypy_cache
-				@printf "$(GREEN)✓$(DEFAULT) Cleaned\n"
 
 lint:
 				@uv run flake8 src
@@ -39,7 +38,6 @@ lint-strict:
 				@uv run mypy src --strict
 
 test:
-				$(call ANIMATION,Running tests)
 				@uv run python -m pytest tests -v
 
 
