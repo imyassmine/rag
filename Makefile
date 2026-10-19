@@ -16,7 +16,7 @@ endef
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ RULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 install:
-				$(call ANIMATION,Installing activity dependencies)
+				$(call ANIMATION,Installing project dependencies)
 				@uv sync
 
 run:

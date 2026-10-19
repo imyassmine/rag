@@ -58,8 +58,6 @@ class Small_LLM_Model:
         dtype: torch.dtype | None = None,
         trust_remote_code: bool = True,
     ) -> None:
-        self._model_name = model_name
-
         # Auto-select device with priority: mps > cuda > cpu
         if device is None:
             if torch.backends.mps.is_available():
